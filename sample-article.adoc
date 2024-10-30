@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: sample-article.html 
+keywords:  
+summary:  
+---
+= 여기에 페이지 제목을 입력합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 서식 파일을 문서, 주제 등 원하는 항목에 사용할 수 있습니다. index.adoc 파일에는 기사 페이지에 대한 올바른 키워드가 없으므로 이 키워드를 서식 파일로 사용하면 나중에 게시 문제가 발생할 수 있습니다.
+
+
+NOTE: 사이드바에 연결되지 않은 경우에도 파일이 게시되므로 초기 게시 전에 이 파일을 삭제하십시오. 몇 가지 문서를 만든 후 대신 스타터로 사용할 수 있습니다.
+
+문서가 콘텐츠 하위 폴더에 있는 경우 위에 표시된 표기법을 두 번 조정해야 합니다.
+
+* `:imagesdir:../media/`
+* `permalink: folder-name/sample-article.html`
+
