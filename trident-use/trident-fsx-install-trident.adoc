@@ -28,17 +28,43 @@ If you want to make use of the snapshot functionality, install the CSI snapshot 
 
 == Helm을 통해 Astra Trident을 설치합니다
 
-다음 환경 변수를 사용하여 * 클라우드 공급자 * 및 * 클라우드 ID * 플래그의 값을 설정합니다.
+. Astra Trident 설치 관리자 패키지를 다운로드합니다
++
+Astra Trident 설치 프로그램 패키지에는 Trident 운영자를 구축하고 Astra Trident를 설치하는 데 필요한 모든 것이 들어 있습니다. GitHub의 Assets 섹션에서 Astra Trident 설치 프로그램의 최신 버전을 다운로드하고 압축을 풉니다.
+`wget https://github.com/NetApp/trident/releases/download/v24.06.0/trident-installer-24.06.0.tar.gz`
+`tar -xf trident-installer-24.06.0.tar.gz`
+`cd trident-installer`
 
+. 다음 환경 변수를 사용하여 * 클라우드 공급자 * 및 * 클라우드 ID * 플래그의 값을 설정합니다.
++
 `export CP="AWS"`
 `export CI="'eks.amazonaws.com/role-arn: arn:aws:iam::<accountID>:role/<AmazonEKS_FSxN_CSI_DriverRole>'"`
 
++
 다음 예에서는 Astra Trident를 설치하고 플래그를 `$CP`, 및 `cloud-identity` 로 `$CI` 설정합니다 `cloud-provider`.
 
++
 [listing]
 ----
 helm install trident trident-operator-100.2406.0.tgz --set cloudProvider=$CP --set cloudIdentity=$CI -–namespace trident
 ----
++
+명령을 사용하여 이름, 네임스페이스, 차트, 상태, 앱 버전 및 수정 번호와 같은 설치 세부 정보를 검토할 수 `helm list` 있습니다.
+
++
+[listing]
+----
+helm list -n trident
+----
++
+[listing]
+----
+NAME                NAMESPACE   REVISION    UPDATED                                 STATUS       CHART                          APP VERSION
+
+trident-operator    trident     1           2024-10-14 14:31:22.463122 +0300 IDT    deployed     trident-operator-100.2406.1    24.06.1
+----
+
+
 
 
 == EKS 애드온을 통해 Astra Trident를 설치합니다
@@ -71,10 +97,13 @@ AWS EKS용 Astra Trident 애드온을 구성하기 전에 다음 사항을 확�
 --
 다음 명령 예에서는 Astra Trident EKS 애드온을 설치합니다.
 
-`eksctl create addon --cluster clusterName --name netapp_trident-operator --version v24.02.0-eksbuild.`
-`eksctl create addon --cluster clusterName --name netapp_trident-operator --version v24.02.0-eksbuild.1` (전용 버전 포함)
+`eksctl create addon --cluster clusterName --name netapp_trident-operator --version v24.6.1-eksbuild`
+`eksctl create addon --cluster clusterName --name netapp_trident-operator --version v24.6.1-eksbuild.1` (전용 버전 포함)
 
 --
+
+NOTE: 선택적 매개 변수를 구성할 때는 `cloudIdentity` EKS 추가 기능을 사용하여 Trident를 설치할 때 를 지정해야 `cloudProvider` 합니다.
+
 .관리 콘솔과 직접 연결되어 있습니다
 --
 . 에서 Amazon EKS 콘솔을 엽니다 https://console.aws.amazon.com/eks/home#/clusters[].
@@ -92,6 +121,10 @@ AWS EKS용 Astra Trident 애드온을 구성하기 전에 다음 사항을 확�
 .. 사용할 * 버전 * 을 선택합니다.
 .. IAM 역할 선택 * 의 경우 * NOT SET * 으로 두십시오.
 .. 선택적 구성 설정 * 을 확장하고 * 추가 기능 구성 스키마 * 를 따라 * 구성 값 * 섹션의 configurationValues 매개 변수를 이전 단계에서 만든 role-arn으로 설정합니다(값은 다음 형식이어야 함 `eks.amazonaws.com/role-arn: arn:aws:iam::464262061435:role/AmazonEKS_FSXN_CSI_DriverRole`). 충돌 해결 방법으로 재정의 를 선택한 경우 기존 애드온에 대한 하나 이상의 설정을 Amazon EKS 애드온 설정으로 덮어쓸 수 있습니다. 이 옵션을 사용하지 않고 기존 설정과 충돌하는 경우 작업이 실패합니다. 결과 오류 메시지를 사용하여 충돌 문제를 해결할 수 있습니다. 이 옵션을 선택하기 전에 Amazon EKS 추가 기능이 자체 관리해야 하는 설정을 관리하지 않는지 확인하십시오.
++
+
+NOTE: 선택적 매개 변수를 구성할 때는 `cloudIdentity` EKS 추가 기능을 사용하여 Trident를 설치할 때 를 지정해야 `cloudProvider` 합니다.
+
 
 
 . 다음 * 을 선택합니다.
@@ -113,11 +146,16 @@ add-on.json
 
    "clusterName": "<eks-cluster>",
    "addonName": "netapp_trident-operator",
-   "addonVersion": "v24.2.0-eksbuild.1",
+   "addonVersion": "v24.6.1-eksbuild.1",
    "serviceAccountRoleArn": "arn:aws:iam::123456:role/astratrident-role",
-   "configurationValues": "{"cloudIdentity": "'eks.amazonaws.com/role-arn: arn:aws:iam::123456:role/astratrident-role'"}"
+   "configurationValues": "{"cloudIdentity": "'eks.amazonaws.com/role-arn: arn:aws:iam::123456:role/astratrident-role'",
+   "cloudProvider": "AWS"}"
 }
 ----
++
+
+NOTE: 선택적 매개 변수를 구성할 `cloudIdentity` 때는 EKS 추가 기능을 사용하여 Trident를 설치할 때 로 `cloudProvider` 지정해야 `AWS` 합니다.
+
 . Astra Trident EKS 애드온 설치"
 +
 `aws eks create-addon --cli-input-json file://add-on.json`
@@ -144,10 +182,10 @@ add-on.json
 [listing]
 ----
 NAME                        VERSION             STATUS    ISSUES    IAMROLE    UPDATE AVAILABLE    CONFIGURATION VALUES
-netapp_trident-operator    v24.2.0-eksbuild.1    ACTIVE    0       {"cloudIdentity":"'eks.amazonaws.com/role-arn: arn:aws:iam::139763910815:role/AmazonEKS_FSXN_CSI_DriverRole'"}
+netapp_trident-operator    v24.6.1-eksbuild.1    ACTIVE    0       {"cloudIdentity":"'eks.amazonaws.com/role-arn: arn:aws:iam::139763910815:role/AmazonEKS_FSXN_CSI_DriverRole'"}
 ----
 * 이전 단계의 출력에서 사용할 수 있는 업데이트 아래에 반환된 버전으로 추가 기능을 업데이트합니다.
-`eksctl update addon --name netapp_trident-operator --version v24.2.0-eksbuild.1 --cluster my-cluster --force`
+`eksctl update addon --name netapp_trident-operator --version v24.6.1-eksbuild.1 --cluster my-cluster --force`
 +
 옵션을 제거하고 Amazon EKS 추가 기능 설정이 기존 설정과 충돌하는 경우 `--force` Amazon EKS 추가 기능 업데이트가 실패하고 충돌 문제를 해결하는 데 도움이 되는 오류 메시지가 표시됩니다. 이 옵션을 지정하기 전에 Amazon EKS 애드온이 관리해야 하는 설정을 관리하지 않는지 확인하십시오. 이러한 설정은 이 옵션으로 덮어써지기 때문입니다. 이 설정의 다른 옵션에 대한 자세한 내용은 을 참조하십시오 link:https://eksctl.io/usage/addons/["추가 기능"]. Amazon EKS Kubernetes 필드 관리에 대한 자세한 내용은 를 참조하십시오 link:https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-field-management.html["Kubernetes 현장 관리"].
 
@@ -175,7 +213,7 @@ netapp_trident-operator    v24.2.0-eksbuild.1    ACTIVE    0       {"cloudIdenti
 --
 다음 예에서는 EKS 추가 기능을 업데이트합니다.
 
-`aws eks update-addon --cluster-name my-cluster netapp_trident-operator vpc-cni --addon-version v24.2.0-eksbuild.1 \
+`aws eks update-addon --cluster-name my-cluster netapp_trident-operator vpc-cni --addon-version v24.6.1-eksbuild.1 \
     --service-account-role-arn arn:aws:iam::111122223333:role/role-name --configuration-values '{}' --resolve-conflicts --preserve`
 
 --
