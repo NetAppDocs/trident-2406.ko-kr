@@ -16,3 +16,5 @@ entries:
     url: "/trident-reco/security-reco.html"
   - title: Linux 통합 키 설정(LUKS)
     url: "/trident-reco/security-luks.html"
+  - title: 전송 중인 Kerberos 암호화를 구성합니다
+    url: "/trident-reco/configure-inflight-kerberos-encryption.html"
