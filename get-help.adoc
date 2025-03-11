@@ -37,17 +37,17 @@ link:https://docs.netapp.com/us-en/trident/index.html["24.06"^]
 
  a| 
 link:https://docs.netapp.com/us-en/trident/index.html["24.02"^]
-| 2025년 2월 | 2026년 2월 | 2027년 2월 
+| -- | 2026년 2월 | 2027년 2월 
 
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2310/index.html["23.10"^]
-| 2024년 10월 | 2025년 10월 | 2026년 10월 
+| -- | 2025년 10월 | 2026년 10월 
 
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2307/index.html["23.07"^]
-| 2024년 7월 | 2025년 7월 | 2026년 7월 
+| -- | 2025년 7월 | 2026년 7월 
 
 
  a| 
@@ -57,32 +57,22 @@ link:https://docs.netapp.com/us-en/trident-2304/index.html["23.04"^]
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2301/index.html["23.01"^]
-| -- | 2025년 1월 | 2026년 1월 
+| -- | -- | 2026년 1월 
 
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2210/index.html["22.10"^]
-| -- | 2024년 10월 | 2025년 10월 
+| -- | -- | 2025년 10월 
 
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2207/index.html["22.07"^]
-| -- | 2024년 7월 | 2025년 7월 
+| -- | -- | 2025년 7월 
 
 
  a| 
 link:https://docs.netapp.com/us-en/trident-2204/index.html["22.04"^]
 | -- | -- | 2025년 4월 
-
-
- a| 
-link:https://docs.netapp.com/us-en/trident-2201/index.html["22.01"^]
-| -- | -- | 2025년 1월 
-
-
- a| 
-link:https://docs.netapp.com/us-en/trident-2110/index.html["21.10"^]
-| -- | -- | 2024년 10월 
 |===
 
 
