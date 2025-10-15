@@ -23,7 +23,7 @@ Trident 연산자를 수동으로 구축하여 Astra Trident를 설치할 수 �
 .<strong> 중요 정보 Astra Trident </strong>
 [%collapsible%open]
 ====
-* Kubernetes 1.31가 이제 Astra Trident에서 지원됩니다. Kubernetes를 업그레이드하기 전에 Trident를 업그레이드하십시오.
+* Kubernetes 1.30이 이제 Astra Trident 에서 지원됩니다. Kubernetes를 업그레이드하기 전에 Trident 업그레이드하세요.
 * Astra Trident은 SAN 환경에서 다중 경로 구성을 엄격하게 적용하고, multipath.conf 파일에서 권장 값은 입니다 `find_multipaths: no`.
 +
 다중 경로 이외의 구성을 사용하거나 `find_multipaths: yes` multipath.conf 파일에서 OR `find_multipaths: smart` 값을 사용하면 마운트 오류가 발생합니다. Trident는 21.07 릴리즈 이후 를 사용할 것을 `find_multipaths: no` 권장합니다.
