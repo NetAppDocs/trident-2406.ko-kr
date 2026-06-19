@@ -84,8 +84,7 @@ Astra Trident에 대한 지원이 필요하면 를 사용하여 지원 번들을
 
 == 를 참조하십시오
 
-* link:https://cloud.netapp.com/blog/topic/astra["Astra 블로그"^]
 * link:https://netapp.io/persistent-storage-provisioner-for-kubernetes/["Astra Trident 블로그"^]
-* link:https://cloud.netapp.com/kubernetes-hub["쿠버네티스 허브"^]
+* link:https://www.netapp.com/console/["쿠버네티스 허브"^]
 * link:https://netapp.io/["NetApp.IO를 참조하십시오"^]
 
