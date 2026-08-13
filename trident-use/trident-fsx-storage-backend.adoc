@@ -13,6 +13,7 @@ summary: 'NetApp ONTAP용 Amazon FSx와 Astra Trident를 사용하면 Amazon EKS
 
 
 
+[[ontap-san-and-nas-driver-integration]]
 == ONTAP SAN 및 NAS 드라이버 통합
 
 다음 예와 같이 AWS Secret Manager에 저장된 SVM 자격 증명(사용자 이름 및 암호)을 사용하여 백엔드 파일을 생성할 수 있습니다.
@@ -76,6 +77,7 @@ spec:
 
 
 
+[[fsx-for-ontap-driver-details]]
 == FSx for ONTAP 드라이버 세부 정보
 
 다음 드라이버를 사용하여 Astra Trident를 NetApp ONTAP용 Amazon FSx와 통합할 수 있습니다.
@@ -91,6 +93,7 @@ spec:
 
 
 
+[[example-configurations]]
 == 예제 설정
 
 .비밀 관리자가 있는 AWS FSx for ONTAP 구성
@@ -136,6 +139,7 @@ parameters:
 ====
 
 
+[[backend-advanced-configuration-and-examples]]
 == 백엔드 고급 구성 및 예
 
 백엔드 구성 옵션은 다음 표를 참조하십시오.
@@ -229,6 +233,7 @@ parameters:
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == 볼륨 프로비저닝을 위한 백엔드 구성 옵션
 
 구성 섹션에서 이러한 옵션을 사용하여 기본 프로비저닝을 제어할 수 `defaults` 있습니다. 예를 들어, 아래 구성 예제를 참조하십시오.
@@ -262,7 +267,7 @@ parameters:
 | `encryption` | 새 볼륨에서 NetApp 볼륨 암호화(NVE)를 활성화하고, 기본값은 로 설정합니다. `false` 이 옵션을 사용하려면 NVE 라이센스가 클러스터에서 활성화되어 있어야 합니다. 백엔드에서 NAE가 활성화된 경우 Astra Trident에 프로비저닝된 모든 볼륨은 NAE가 활성화됩니다. 자세한 내용은 다음을 link:../trident-reco/security-reco.html["Astra Trident가 NVE 및 NAE와 연동되는 방식"]참조하십시오. | `false` 
 
 
-| `luksEncryption` | LUKS 암호화를 사용합니다. 을 link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["LUKS(Linux Unified Key Setup) 사용"]참조하십시오. SAN만 해당. | "" 
+| `luksEncryption` | LUKS 암호화를 활성화합니다. link:../trident-reco/security-luks.html["LUKS(Linux Unified Key Setup) 사용"]을(를) 참조하십시오. SAN 전용입니다. | "" 
 
 
 | `tieringPolicy` | 사용할 계층화 정책	`none` | `snapshot-only` ONTAP 9 .5 이전 SVM-DR 구성의 경우 
@@ -275,6 +280,7 @@ parameters:
 |===
 
 
+[[prepare-to-provision-smb-volumes]]
 == SMB 볼륨 프로비저닝을 위한 준비
 
 드라이버를 사용하여 SMB 볼륨을 프로비저닝할 수 `ontap-nas` 있습니다. 다음 단계를 완료하기 전에 <<ONTAP SAN 및 NAS 드라이버 통합>>수행하십시오.

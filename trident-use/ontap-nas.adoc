@@ -16,6 +16,7 @@ ONTAP 및 Cloud Volumes ONTAP NAS 드라이버를 사용하여 ONTAP 백엔드�
 
 
 
+[[ontap-nas-driver-details]]
 == ONTAP NAS 드라이버 세부 정보입니다
 
 Astra Trident는 ONTAP 클러스터와 통신할 수 있는 다음과 같은 NAS 스토리지 드라이버를 제공합니다. 지원되는 액세스 모드는 _ReadWriteOnce_(RWO), _ReadOnlyMany_(ROX), _ReadWriteMany_(rwx), _ReadWriteOncePod_(RWOP)입니다.
@@ -62,6 +63,7 @@ RWO, ROX, rwx, RWOP
 |===
 
 
+[[astra-control-driver-compatibility]]
 === Astra Control 드라이버 호환성
 
 Astra Control은 `ontap-nas-flexgroup`, 및 `ontap-san` 드라이버로 생성된 볼륨에 대한 원활한 보호, 재해 복구 및 이동성(Kubernetes 클러스터 간에 볼륨 이동)을 제공합니다 `ontap-nas`. 자세한 내용은 을 link:https://docs.netapp.com/us-en/astra-control-center/use/replicate_snapmirror.html#replication-prerequisites["Astra Control 복제 사전 요구 사항"^] 참조하십시오.
@@ -76,6 +78,7 @@ Astra Control은 `ontap-nas-flexgroup`, 및 `ontap-san` 드라이버로 생성�
 ====
 
 
+[[user-permissions]]
 == 사용자 권한
 
 Astra Trident은 ONTAP 또는 SVM 관리자로 실행해야 하며, 일반적으로 클러스터 사용자나 `vsadmin` SVM 사용자 또는 동일한 역할을 가진 다른 이름의 사용자를 사용합니다 `admin`.

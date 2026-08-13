@@ -16,6 +16,7 @@ Trident 연산자를 사용하면 사양의 속성을 사용하여 Astra Trident
 
 
 
+[[understanding-controller-pods-and-node-pods]]
 == 컨트롤러 Pod 및 노드 포드 이해
 
 Astra Trident는 단일 컨트롤러 POD와 클러스터의 각 작업자 노드에 노드 POD를 더한 형태로 실행됩니다. Astra Trident 볼륨을 마운트하려는 호스트에서 노드 포드가 실행되고 있어야 합니다.
@@ -28,6 +29,7 @@ Kuberneteslink:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-po
 
 
 
+[[configuration-options]]
 == 구성 옵션
 
 
@@ -117,6 +119,7 @@ NOTE: POD 매개 변수 포맷에 대한 자세한 내용은 을 link:https://ku
 
 
 
+[[details-about-force-detach]]
 === 강제 분리에 대한 세부 정보
 
 강제 분리는 및 `ontap-san-economy` 에서만 사용할 수 `ontap-san` 있습니다. 강제 분리를 활성화하기 전에 Kubernetes 클러스터에서 비정상 노드 종료(ngns)를 활성화해야 합니다. 자세한 내용은 을 link:https://kubernetes.io/docs/concepts/architecture/nodes/#non-graceful-node-shutdown["Kubernetes: 노드 정상 종료 아님"^]참조하십시오.
@@ -142,6 +145,7 @@ NOTE: Trident 컨트롤러는 Trident 노드 포드에 의해 노드가 다시 �
 
 
 
+[[sample-configurations]]
 == 샘플 구성
 
 를 정의할 때 `TridentOrchestrator` 의 속성을 사용하여 설치를 사용자 지정할 수 <<구성 옵션>>있습니다.

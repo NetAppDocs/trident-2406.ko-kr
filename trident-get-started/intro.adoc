@@ -16,6 +16,7 @@ Astra Trident은 NetApp이 의 일부로 유지보수하는 완전 지원되는 
 
 
 
+[[what-is-astra]]
 == 아스트라(Astra)란?
 
 Astra를 사용하면 퍼블릭 클라우드와 온프레미스 모두에서 Kubernetes에서 실행되는 데이터 기반의 컨테이너 워크로드를 손쉽게 관리, 보호 및 이동할 수 있습니다.
@@ -26,6 +27,7 @@ Astra는 Astra Trident를 기반으로 영구 컨테이너 스토리지를 프�
 
 
 
+[[what-is-astra-trident]]
 == Astra Trident란?
 
 Astra Trident를 사용하면 ONTAP(AFF, NetApp FAS, Select, 클라우드, NetApp ONTAP용 Amazon FSx), Element 소프트웨어(NetApp HCI, SolidFire), Azure NetApp Files 서비스 및 Google Cloud 기반 Cloud Volumes Service
@@ -39,9 +41,10 @@ NOTE: Kubernetes를 처음으로 사용하는 경우라면 에 익숙해야 합�
 
 
 
+[[take-the-astra-trident-test-drive]]
 == Astra Trident 시험 구동을 시작하십시오
 
-시험 구동을 실시하려면 즉시 사용 가능한 랩 이미지를 사용하여 "컨테이너화된 워크로드용 영구 스토리지 간편한 배포 및 복제" 액세스 권한을 link:https://www.netapp.com/us/try-and-buy/test-drive/index.aspx["NetApp 시험 구동"^]요청하십시오. 테스트 드라이브는 3노드 Kubernetes 클러스터와 Astra Trident가 설치 및 구성된 샌드박스 환경을 제공합니다. Astra Trident에 대해 알아보고 해당 기능을 살펴볼 수 있는 좋은 방법입니다.
+테스트 드라이브를 이용하려면 바로 사용할 수 있는 랩 이미지를 사용하여 "컨테이너화된 워크로드를 위한 영구 스토리지 간편 배포 및 복제" link:https://www.netapp.com/test-drives/["NetApp 시험 구동"^]에 대한 액세스 권한을 요청하십시오. 이 테스트 드라이브는 3개 노드로 구성된 Kubernetes 클러스터와 Astra Trident가 설치 및 구성된 샌드박스 환경을 제공합니다. Astra Trident에 익숙해지고 기능을 살펴보기에 좋은 방법입니다.
 
 또 다른 link:https://kubernetes.io/docs/setup/independent/install-kubeadm/["kubeadm 설치 가이드"]옵션은 Kubernetes에서 제공되는 입니다.
 
@@ -50,6 +53,7 @@ NOTE: 운영 환경에서는 이러한 지침에 따라 구축한 Kubernetes 클
 
 
 
+[[kubernetes-integration-with-netapp-products]]
 == Kubernetes와 NetApp 제품의 통합
 
 NetApp 스토리지 제품 포트폴리오는 Kubernetes 클러스터의 다양한 측면과 통합되어 Kubernetes 구축의 기능, 기능, 성능 및 가용성을 향상하는 고급 데이터 관리 기능을 제공합니다.
@@ -102,6 +106,7 @@ ONTAP 시스템은 All-Flash, 하이브리드 또는 All-HDD 구성을 제공하
 ====
 
 
+[[for-more-information]]
 == 를 참조하십시오
 
 * https://docs.netapp.com/us-en/astra-family/intro-family.html["NetApp Astra 제품군"^]

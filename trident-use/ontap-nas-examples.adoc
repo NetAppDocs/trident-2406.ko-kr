@@ -16,6 +16,7 @@ Astra Trident 설치에 ONTAP NAS 드라이버를 생성하고 사용하는 방�
 
 
 
+[[backend-configuration-options]]
 == 백엔드 구성 옵션
 
 백엔드 구성 옵션은 다음 표를 참조하십시오.
@@ -101,6 +102,7 @@ Astra Trident 설치에 ONTAP NAS 드라이버를 생성하고 사용하는 방�
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == 볼륨 프로비저닝을 위한 백엔드 구성 옵션
 
 구성 섹션에서 이러한 옵션을 사용하여 기본 프로비저닝을 제어할 수 `defaults` 있습니다. 예를 들어, 아래 구성 예제를 참조하십시오.
@@ -156,6 +158,7 @@ NOTE: Astra Trident와 함께 QoS 정책 그룹을 사용하려면 ONTAP 9.8 이
 
 
 
+[[volume-provisioning-examples]]
 === 볼륨 프로비저닝의 예
 
 다음은 기본값이 정의된 예입니다.
@@ -204,6 +207,7 @@ image::../media/volume-show-nas.png[에는 volume show 명령의 출력이 나�
 
 
 
+[[minimal-configuration-examples]]
 == 최소 구성의 예
 
 다음 예에서는 대부분의 매개 변수를 기본값으로 두는 기본 구성을 보여 줍니다. 이는 백엔드를 정의하는 가장 쉬운 방법입니다.
@@ -385,6 +389,7 @@ defaults: {
 ====
 
 
+[[examples-of-backends-with-virtual-pools]]
 == 가상 풀의 백엔드 예
 
 아래 표시된 샘플 백엔드 정의 파일에서 모든 스토리지 풀에 대해 특정 기본값이 설정되어 있습니다(예: `spaceReserve` 없음, `spaceAllocation` 거짓, 거짓 `encryption`). 가상 풀은 스토리지 섹션에 정의됩니다.
@@ -567,6 +572,7 @@ storage:
 ====
 
 
+[[map-backends-to-storageclasses]]
 == 백엔드를 StorageClasses에 매핑합니다
 
 다음 StorageClass 정의는 을 <<가상 풀의 백엔드 예>>참조하십시오. 각 StorageClass 는 필드를 사용하여 `parameters.selector` 볼륨을 호스팅하는 데 사용할 수 있는 가상 풀을 호출합니다. 선택한 가상 풀에 볼륨이 정의되어 있습니다.
@@ -642,6 +648,7 @@ Astra Trident가 선택한 가상 풀을 결정하고 스토리지 요구 사항
 
 
 
+[[update-datalif-after-initial-configuration]]
 == 초기 구성 후 업데이트 `dataLIF`
 
 다음 명령을 실행하여 초기 구성 후에 데이터 LIF를 변경할 수 있으며, 업데이트된 데이터 LIF가 포함된 새 백엔드 JSON 파일을 제공할 수 있습니다.

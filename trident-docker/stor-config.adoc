@@ -16,6 +16,7 @@ Astra Trident 구성에 사용할 수 있는 구성 옵션을 확인하십시오
 
 
 
+[[global-configuration-options]]
 == 글로벌 구성 옵션
 
 이러한 구성 옵션은 사용 중인 스토리지 플랫폼에 관계없이 모든 Astra Trident 구성에 적용됩니다.
@@ -71,6 +72,7 @@ TIP: Element 백엔드에 (기본값 포함)을 사용하지 `storagePrefix` 마
 |===
 
 
+[[ontap-configuration]]
 == ONTAP 구성
 
 위의 글로벌 구성 값 외에도 ONTAP를 사용할 경우 다음과 같은 최상위 옵션을 사용할 수 있습니다.
@@ -265,6 +267,7 @@ SAN 옵션 - 파일 시스템 유형을 선택할 수 있으며 기본값은 로
 |===
 
 
+[[scaling-options]]
 === 축척 옵션
 
  `ontap-nas` `ontap-san`및 드라이버는 각 Docker 볼륨에 대한 ONTAP FlexVol를 생성합니다. ONTAP는 최대 12,000개의 FlexVol 클러스터를 사용하여 클러스터 노드당 최대 1,000개의 FlexVol을 지원합니다. Docker 볼륨 요구 사항이 이러한 제한 내에 적합할 경우, `ontap-nas` Docker 볼륨 세분화된 스냅샷 및 클론 복제와 같이 FlexVol에서 제공하는 추가 기능 덕분에 드라이버를 선호하는 NAS 솔루션이 됩니다.
@@ -293,6 +296,7 @@ FlexGroups 및 FlexGroups에 적합한 워크로드에 대한 자세한 내용�
 
 
 
+[[example-ontap-configuration-files]]
 === ONTAP 구성 파일의 예
 
 .<code> ONTAP-nas </code> 드라이버에 대한 NFS 예
@@ -411,6 +415,7 @@ FlexGroups 및 FlexGroups에 적합한 워크로드에 대한 자세한 내용�
 ====
 
 
+[[element-software-configuration]]
 == Element 소프트웨어 구성
 
 Element 소프트웨어(NetApp HCI/SolidFire)를 사용하는 경우 글로벌 구성 값 외에도 이러한 옵션을 사용할 수 있습니다.
@@ -465,6 +470,7 @@ QoS 사양
 
 
 
+[[example-element-software-configuration-file]]
 === Element 소프트웨어 구성 파일의 예
 
 [listing]

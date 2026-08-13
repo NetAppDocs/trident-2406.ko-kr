@@ -16,6 +16,7 @@ Astra Trident가 통신에 사용하는 포트에 대해 자세히 알아보십�
 
 
 
+[[astra-trident-ports]]
 == Astra Trident 포트
 
 Astra Trident는 다음 포트를 통해 통신합니다.

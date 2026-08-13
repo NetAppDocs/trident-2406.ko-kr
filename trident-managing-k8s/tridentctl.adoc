@@ -16,6 +16,7 @@ summary: Trident에 대한 간단한 액세스를 제공하는 명령줄 유틸�
 
 
 
+[[commands-and-global-flags]]
 == 명령 및 글로벌 플래그
 
 를 실행하여 사용 가능한 명령 목록을 `tridentctl` 가져오거나 해당 명령에 대한 옵션 및 플래그 목록을 가져오기 위해 해당 명령에 플래그를 추가할 `--help` 수 `tridentctl help` 있습니다.
@@ -70,10 +71,12 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 ====
 
 
+[[command-options-and-flags]]
 == 명령 옵션 및 플래그
 
 
 
+[[create]]
 === 생성
 
 명령을 사용하여 `create` Astra Trident에 리소스를 추가할 수 있습니다.
@@ -85,6 +88,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[delete]]
 === 삭제
 
 명령을 사용하여 `delete` Astra Trident에서 리소스를 하나 이상 제거하십시오.
@@ -99,6 +103,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[get]]
 === 가져오기
 
 명령을 사용하여 `get` Astra Trident에서 하나 이상의 리소스를 확인하십시오.
@@ -116,6 +121,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[images]]
 === 이미지
 
  `images`플래그를 사용하여 Astra Trident에 필요한 컨테이너 이미지 표를 인쇄합니다.
@@ -128,6 +134,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[import-volume]]
 === 볼륨 가져오기
 
 명령을 사용하여 `import volume` 기존 볼륨을 Astra Trident로 가져옵니다.
@@ -142,6 +149,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[install]]
 === 설치합니다
 
  `install`플래그를 사용하여 Astra Trident을 설치합니다.
@@ -169,6 +177,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[logs]]
 === 로그
 
 플래그를 사용하여 `logs` Astra Trident의 로그를 인쇄합니다.
@@ -185,6 +194,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[send]]
 === 전송
 
 명령을 사용하여 `send` Astra Trident에서 리소스를 전송한다.
@@ -196,6 +206,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[uninstall]]
 === 설치 제거
 
  `uninstall`플래그를 사용하여 Astra Trident를 제거합니다.
@@ -208,6 +219,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[update]]
 === 업데이트
 
 명령을 사용하여 `update` Astra Trident에서 리소스를 수정할 수 있습니다.
@@ -219,6 +231,7 @@ WARNING: Trident REST 인터페이스는 127.0.0.1(IPv4의 경우) 또는 [::1](
 
 
 
+[[update-backend-state]]
 === 백엔드 상태를 업데이트합니다
 
 명령을 사용하여 `update backend state` 백엔드 작업을 일시 중단하거나 재개합니다.
@@ -295,6 +308,7 @@ userState: suspended
 ====
 
 
+[[version]]
 === 버전
 
  `version`플래그를 사용하여 및 실행 중인 Trident 서비스의 버전을 `tridentctl` 인쇄합니다.

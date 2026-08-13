@@ -20,6 +20,7 @@ summary:
 ----
 
 
+[[google-cloud-netapp-volumes-driver-details]]
 == Google Cloud NetApp 볼륨 드라이버 세부 정보입니다
 
 Astra Trident는 `google-cloud-netapp-volumes` 클러스터와 통신할 수 있는 드라이버를 제공합니다. 지원되는 액세스 모드는 _ReadWriteOnce_(RWO), _ReadOnlyMany_(ROX), _ReadWriteMany_(rwx), _ReadWriteOncePod_(RWOP)입니다.

@@ -16,6 +16,7 @@ Astra Trident를 설치하기 전에 이러한 일반 시스템 요구 사항을
 
 
 
+[[critical-information-about-astra-trident]]
 == Astra Trident에 대한 중요 정보
 
 * Astra Trident * 에 대한 다음 중요 정보를 읽어야 합니다
@@ -33,6 +34,7 @@ Astra Trident를 설치하기 전에 이러한 일반 시스템 요구 사항을
 ====
 
 
+[[supported-frontends-orchestrators]]
 == 지원되는 프런트엔드(오케스트레이터)
 
 Astra Trident는 다음을 비롯한 여러 컨테이너 엔진과 오케스트레이터가 지원됩니다.
@@ -58,6 +60,7 @@ WARNING: Astra Trident이 설치된 Kubernetes 클러스터를 1.24에서 1.25 �
 
 
 
+[[supported-backends-storage]]
 == 지원되는 백엔드(스토리지)
 
 Astra Trident를 사용하려면 다음 중 하나 이상의 지원되는 백엔드가 필요합니다.
@@ -73,6 +76,7 @@ Astra Trident를 사용하려면 다음 중 하나 이상의 지원되는 백엔
 
 
 
+[[feature-requirements]]
 == 피처 요구 사항
 
 아래 표에는 Astra Trident의 이번 릴리즈와 함께 사용할 수 있는 기능과 지원하는 Kubernetes 버전이 요약되어 있습니다.
@@ -139,6 +143,7 @@ Astra Trident를 사용하려면 다음 중 하나 이상의 지원되는 백엔
 |===
 
 
+[[tested-host-operating-systems]]
 == 호스트 운영 체제를 테스트했습니다
 
 Astra Trident가 공식적으로 특정 운영 체제를 지원하지 않지만 다음과 같은 운영 체제가 작동하는 것으로 알려져 있습니다.
@@ -159,6 +164,7 @@ NOTE: NVMe/TCP에는 RHEL 9 이상이 필요합니다.
 
 
 
+[[host-configuration]]
 == 호스트 구성
 
 Kubernetes 클러스터의 모든 작업자 노드는 Pod용으로 프로비저닝된 볼륨을 마운트할 수 있어야 합니다. 작업자 노드를 준비하려면 드라이버 선택에 따라 NFS, iSCSI 또는 NVMe 툴을 설치해야 합니다.
@@ -167,6 +173,7 @@ link:../trident-use/worker-node-prep.html["작업자 노드를 준비합니다"]
 
 
 
+[[storage-system-configuration]]
 == 스토리지 시스템 구성
 
 Astra Trident는 백엔드 구성에서 사용하기 전에 스토리지 시스템을 변경해야 할 수 있습니다.
@@ -175,6 +182,7 @@ link:../trident-use/backends.html["백엔드 구성"]
 
 
 
+[[astra-trident-ports]]
 == Astra Trident 포트
 
 Astra Trident는 통신을 위해 특정 포트에 액세스해야 합니다.
@@ -183,6 +191,7 @@ link:../trident-reference/ports.html["Astra Trident 포트"]
 
 
 
+[[container-images-and-corresponding-kubernetes-versions]]
 == 컨테이너 이미지 및 해당 Kubernetes 버전
 
 공기 박형 설치의 경우 다음 목록은 Astra Trident를 설치하는 데 필요한 컨테이너 이미지의 참조입니다. 명령을 사용하여 `tridentctl images` 필요한 컨테이너 이미지 목록을 확인합니다.
