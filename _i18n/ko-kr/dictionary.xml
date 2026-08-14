@@ -4470,7 +4470,6 @@
   <block id="05fc06287c0a941160e7d720a19832c9" category="paragraph">네, Astra Trident는 오프라인으로 설치할 수 있습니다. <block ref="0a8f801f4a8f59befe0bce875b836d6c" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="86225dcb19db1de0fac1aa3e3f6a51f7" category="paragraph">Trident 설치 프로그램은 Kubernetes ClusterRole을 생성하며, 이 역할은 클러스터의 PersistentVolume, PersistentVolumeClaim, StorageClass 및 Secret 리소스에 대한 특정 액세스 권한을 가집니다. <block ref="e4b7fd8c6cc5dd78952350dce1750124" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
   <block id="1e011868ab20c9e559f0a57d12d019fb" category="paragraph">테스트 드라이브를 이용하려면 바로 사용할 수 있는 랩 이미지를 사용하여 "컨테이너화된 워크로드를 위한 영구 스토리지 간편 배포 및 복제" <block ref="1b82f3af90a0f7c7537a178da2b2ffa1" category="inline-link-macro-rx"></block>에 대한 액세스 권한을 요청하십시오. 이 테스트 드라이브는 3개 노드로 구성된 Kubernetes 클러스터와 Astra Trident가 설치 및 구성된 샌드박스 환경을 제공합니다. Astra Trident에 익숙해지고 기능을 살펴보기에 좋은 방법입니다.</block>
-  <block id="fd70f1b164adc63154ddd14bc45da369" category="paragraph"><block ref="f0147e8cec197bebba8f7503f81d4b69" category="inline-link-macro-rx"></block> 외에도 <block ref="fc0cdbd8defe0c7175199dd05a0f8e76" category="inline-link-macro-rx"></block>이(가) 필요합니다.</block>
   <block id="da4135ce2a4993f23b82709d1072d478" category="paragraph">Linux 호스트에 로그인하여 정상적으로 작동하는 <block ref="f546aa86570a808d23361d7f4e2a08c3" category="inline-link-macro-rx"></block>를 관리하고 있는지, 그리고 필요한 권한이 있는지 확인하십시오.</block>
   <block id="0d8f30017a3c82df9a5d969fa5e4586f" category="paragraph">설치를 시작하기 전에 Linux 호스트에 로그인하여 작동 중인 <block ref="f546aa86570a808d23361d7f4e2a08c3" category="inline-link-macro-rx"></block>를 관리하고 있는지, 필요한 권한이 있는지 확인합니다.</block>
   <block id="6e0142dfd4a5236fbce5c22e4e30fc2b" category="paragraph">설치를 시작하기 전에 Linux 호스트에 로그인하여 작동 중인 <block ref="958ebeab180637e89445160bac2d22e7" category="inline-link-macro-rx"></block>를 관리하고 있는지, 필요한 권한이 있는지 확인합니다.</block>
@@ -4487,4 +4486,5 @@
   <block id="685a641d8dbaf63cf2a76d810249d834" category="list-text">[[first-step]]처음에 사용했던 설치 방법을 이용하여 Astra Trident에서 Astra Control Provisioner를 활성화하십시오.</block>
   <block id="c30252f2d0066b5068c0018598caa179" category="list-text"><block ref="9dd8c260676cdbe799894b1bfaa380f3" category="inline-link-rx"></block>.</block>
   <block id="5b1ab0fe5df34787bb6e83e783c2d46f" category="list-text"><block ref="299939be75f9a3e7d44493947c6b6dbe" category="inline-link-rx"></block>.</block>
+  <block id="db7fc8df66e930e05282807a6ebd58f4" category="paragraph"><block ref="1feb3274d112f2cef694d133af384cac" category="inline-link-macro-rx"></block> 외에도 <block ref="fc0cdbd8defe0c7175199dd05a0f8e76" category="inline-link-macro-rx"></block>이(가) 필요합니다.</block>
 </blocks>
